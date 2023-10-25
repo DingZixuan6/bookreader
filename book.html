@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <a href="index.html"> 
+        <input type=button value="Back"> 
+    </a>
+<head>
+    <title>Pagination Example</title>
+    <style>
+        .page {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        .pagination {
+            text-align: center;
+        }
+        .pagination a {
+            margin: 5px;
+            text-decoration: none;
+        }
+        .mark { background-color: #f55; }
+    </style>
+    <script>
+        var currentPage = 1;
+        var totalPages = 4;
+
+        function showPage(pageNumber) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('visible');
+            }
+
+            var pageToShow = document.getElementById('page' + pageNumber);
+            pageToShow.classList.add('visible');
+            currentPage = pageNumber;
+
+            updatePageNavigation();
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                showPage(currentPage + 1);
+            }
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        }
+
+        function goToPage(pageNumber) {
+            showPage(pageNumber);
+        }
+
+        function updatePageNavigation() {
+            document.getElementById('page-number').innerText = currentPage;
+        }
+    </script>
+</head>
+<body>
+<div id="page1" class="page visible">
+    <h2>Page 1</h2>
+    <p><div>Full Text Archive
+    </div>
+    <div>https://www.fulltextarchive.com
+    </div>
+    <div>The Wonderful Wizard of Oz by L. Frank Baum
+    </div>
+    <div>Contents
+    </div>
+    <div>--Introduction--
+    </div>
+    <div>1. The Cyclone
+    </div>
+    <div>2. The Council with the Munchkins 
+    </div>
+    <div>3. How Dorothy Saved the Scarecrow 
+    </div>
+    <div>4. The Road Through the Forest 
+    </div>
+    <div>5. The Rescue of the Tin Woodman 
+    </div>
+    <div>6. The Cowardly Lion
+    </div>
+    <div>7. The Journey to the Great Oz 
+    </div>
+    <div>8. The Deadly Poppy Field
+    </div>
+    <div>9. The Queen of the Field Mice 
+    </div>
+    <div>10. The Guardian of the Gates 
+    </div>
+    <div>11. The Emerald City of Oz 
+    </div>
+    <div>12.The Search for the Wicked Witch 
+    </div>
+    <div>13. The Rescue
+    </div>
+    <div>14. The Winged Monkeys 
+    </div>
+    <div>15. The Discovery of Oz the Terrible 
+    </div>
+    <div>16. The Magic Art of the Great
+    </div>
+    <div>Humbug 
+    </div>
+    <div>17. How the Balloon Was Launched 
+    </div>
+    <div>18. Away to the South
+    </div>
+    <div>19. Attacked by the Fighting Trees 
+    </div>
+    <div>20. The Dainty China Country 
+    </div>
+    <div>21. The Lion Becomes the
+    </div>
+    <div>King of Beasts 
+    </div>
+    <div>22. The Country of the Quadlings 
+    </div>
+    <div>23. Glinda The Good Witch Grants Dorothy's Wish 
+    </div>
+    <div>24. Home Again
+    </div>
+    <div>
+    </div>
+    <div>Introduction
+    </div>
+    <div>Folklore, legends, myths and fairy tales have followed childhood through the ages, for every healthy youngster has a wholesome and instinctive love for stories fantastic, marvelous and manifestly unreal. The winged fairies of Grimm and Andersen have brought more happiness to childish hearts than all other human creations.
+    </div>
+    <div>Yet the old time fairy tale, having served for generations, may now be classed as "historical" in the children's library; for the time has come for a series of newer "wonder tales" in which the stereotyped genie, dwarf and fairy are eliminated, together with all the horrible and bloodcurdling incidents devised by their authors to point a fearsome moral to each tale. Modern education includes morality; therefore the modern child seeks only entertainment in its wonder tales and gladly dispenses with all disagreeable incident.
+    </div>
+    <div>Having this thought in mind, the story of "The Wonderful Wizard of Oz" was written solely to please children of today. It aspires to being a modernized fairy tale, in which the wonderment and joy are retained and the heartaches and nightmares are left out.
+    </div>
+    <br></p>
+</div>
+<div id="page2" class="page">
+    <h2>Page 2</h2>
+    <p><div></div>
+        <div>Uncle Henry never laughed. He worked hard from morning till night and did not know what joy was. He was gray also, from his long beard to his rough boots, and he looked stern and solemn, and rarely spoke.
+        </div>
+        <div>It was Toto that made Dorothy laugh, and saved her from growing as gray as her other surroundings. Toto was not gray; he was a little black dog, with long silky hair and small black eyes that twinkled merrily on either side of his funny, wee nose. Toto played all day long, and Dorothy played with him, and loved him dearly.
+        </div>
+        <div>Today, however, they were not playing. Uncle Henry sat upon the doorstep and looked anxiously at the sky, which was even grayer than usual. Dorothy stood in the door with Toto in her arms, and looked at the sky too. Aunt Em was washing the dishes.
+        </div>
+        <div>From the far north they heard a low wail of the wind, and Uncle Henry and Dorothy could see where the long grass bowed in waves before the coming storm. There now came a sharp whistling in the air from the south, and as they turned their eyes that way they saw ripples in the grass coming from that direction also.
+        </div>
+        <div>Suddenly Uncle Henry stood up.
+        </div>
+        <div>"There's a cyclone coming, Em," he called to his wife. "I'll go look after the stock." Then he ran toward the sheds where the cows and horses were kept.
+        </div>
+        <div>Aunt Em dropped her work and came to the door. One glance told her of the danger close at hand.
+        </div>
+        <div>"Quick, Dorothy!" she screamed. "Run for the cellar!"
+        </div>
+        <div>Toto jumped out of Dorothy's arms and hid under the bed, and the girl started to get him. Aunt Em, badly frightened, threw open the trap door in the floor and climbed down the ladder into the small, dark hole. Dorothy caught Toto at last and started to follow her aunt. When she was halfway across the room there came a great shriek from the wind, and the house shook so hard that she lost her footing and sat down suddenly upon the floor.
+        </div>
+        <br></p>
+</div>
+<div id="page3" class="page">
+    <h2>Page 3</h2>
+    <p><div></div>
+        <div>Then a strange thing happened.
+        </div>
+        <div>The house whirled around two or three times and rose slowly through the air. Dorothy felt as if she were going up in a balloon.
+        </div>
+        <div>The north and south winds met where the house stood, and made it the exact center of the cyclone. In the middle of a cyclone the air is generally still, but the great pressure of the wind on every side of the house raised it up higher and higher, until it was at the very top of the cyclone; and there it remained and was carried miles and miles away as easily as you could carry a feather.
+        </div>
+        <div>It was very dark, and the wind howled horribly around her, but Dorothy found she was riding quite easily. After the first few whirls around, and one other time when the house tipped badly, she felt as if she were being rocked gently, like a baby in a cradle.
+        </div>
+        <div>Toto did not like it. He ran about the room, now here, now there, barking loudly; but Dorothy sat quite still on the floor and waited to see what would happen.
+        </div>
+        <div>Once Toto got too near the open trap door, and fell in; and at first the little girl thought she had lost him. But soon she saw one of his ears sticking up through the hole, for the strong pressure of the air was keeping him up so that he could not fall. She crept to the hole, caught Toto by the ear, and dragged him into the room again, afterward closing the trap door so that no more accidents could happen.
+        </div>
+        <div>Hour after hour passed away, and slowly Dorothy got over her fright; but she felt quite lonely, and the wind shrieked so loudly all about her that she nearly became deaf. At first she had wondered if she would be dashed to pieces when the house fell again; but as the hours passed and nothing terrible happened, she stopped worrying and resolved to wait calmly and see what the future would bring. At last she crawled over the swaying floor to her bed, and lay down upon it; and Toto followed and lay down beside her.
+        </div>
+        <div>In spite of the swaying of the house and the wailing of the wind, Dorothy soon closed her eyes and fell fast asleep.
+        </div>
+        <br></p>
+</div>
+<div id="page4" class="page">
+    <h2>Page 4</h2>
+    <p><div>2. The Council with the Munchkins
+    </div>
+    <div>She was awakened by a shock, so sudden and severe that if Dorothy had not been lying on the soft bed she might have been hurt. As it was, the jar made her catch her breath and wonder what had happened; and Toto put his cold little nose into her face and whined dismally. Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room. She sprang from her bed and with Toto at her heels ran and opened the door.
+    </div>
+    <div>The little girl gave a cry of amazement and looked about her, her eyes growing bigger and bigger at the wonderful sights she saw.
+    </div>
+    <div>The cyclone had set the house down very gently--for a cyclone--in the midst of a country of marvelous beauty. There were lovely patches of greensward all about, with stately trees bearing rich and luscious fruits. Banks of gorgeous flowers were on every hand, and birds with rare and brilliant plumage sang and fluttered in the trees and bushes. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.
+    </div>
+    <div>While she stood looking eagerly at the strange and beautiful sights, she noticed coming toward her a group of the queerest people she had ever seen. They were not as big as the grown folk she had always been used to; but neither were they very small. In fact, they seemed about as tall as Dorothy, who was a well-grown child for her age, although they were, so far as looks go, many years older.
+    </div>
+    <div>Three were men and one a woman, and all were oddly dressed. They wore round hats that rose to a small point a foot above their heads, with little bells around the brims that tinkled sweetly as they moved. The hats of the men were blue; the little woman's hat was white, and she wore a white gown that hung in pleats from her shoulders. Over it were sprinkled little stars that glistened in the sun like diamonds. The men were dressed in blue, of the same shade as their hats, and wore well-polished boots with a deep roll of blue at the tops. The men, Dorothy thought, were about as old as Uncle Henry, for two of them had beards. But the little woman was doubtless much older. Her face was covered with wrinkles, her hair was nearly white, and she walked rather stiffly.
+    </div>
+    <br></p>
+</div>
+
+<button onclick="previousPage()">Previous</button>
+<div class="pagination" id="pagination">
+    <a href="#" onclick="goToPage(1)">1</a>
+    <a href="#" onclick="goToPage(2)">2</a>
+    <a href="#" onclick="goToPage(3)">3</a>
+    <a href="#" onclick="goToPage(4)">4</a>
+</div>
+<button onclick="nextPage()">Next</button>
+</body>
+</html>
